@@ -30,5 +30,7 @@ RUN cd /srv/shiny-server/
 # change permission of the shiny folder where the app sits
 RUN chmod -R 777 /srv/shiny-server
 
+WORKDIR /srv/shiny-server/
+
 # Start the server with the container
 CMD ["/usr/bin/shiny-server.sh"]
